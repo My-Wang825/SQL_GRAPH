@@ -10,7 +10,7 @@ import logging
 import os
 import re
 from urllib import error, request
-from typing import Any, Dict, Iterator, List
+from typing import Any, Dict, Iterator, List, Union
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +23,53 @@ def _clean_model_text(text: str) -> str:
     t = re.sub(r"<think>[\s\S]*?</think>", "", t, flags=re.I)
     t = re.sub(r"<thinking>[\s\S]*?</thinking>", "", t, flags=re.I)
     return t.strip()
+
+
+def _message_content_to_str(content: Union[str, List[Any], None]) -> str:
+    """OpenAI 兼容 message.content：字符串或 content-parts 列表。"""
+    if content is None:
+        return ""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: List[str] = []
+        for block in content:
+            if not isinstance(block, dict):
+                continue
+            if block.get("type") == "text":
+                t = block.get("text")
+                if isinstance(t, str):
+                    parts.append(t)
+            elif isinstance(block.get("text"), str):
+                parts.append(block["text"])
+        return "".join(parts)
+    return str(content)
+
+
+def _delta_text_chunk(delta: Dict[str, Any]) -> str:
+    """
+    从流式 choices[].delta 提取可见文本。
+    兼容：标准 content、多模态 content 数组、reasoning_content、MiniMax reasoning_details。
+    """
+    if not isinstance(delta, dict):
+        return ""
+    out: List[str] = []
+    c = delta.get("content")
+    if isinstance(c, str) and c:
+        out.append(c)
+    elif isinstance(c, list):
+        out.append(_message_content_to_str(c))
+    rc = delta.get("reasoning_content")
+    if isinstance(rc, str) and rc.strip():
+        out.append(rc)
+    rd = delta.get("reasoning_details")
+    if isinstance(rd, list):
+        for item in rd:
+            if isinstance(item, dict):
+                tx = item.get("text")
+                if isinstance(tx, str) and tx:
+                    out.append(tx)
+    return "".join(out)
 
 
 def _call_minimax_openai_compatible(
@@ -71,7 +118,10 @@ def _call_minimax_openai_compatible(
     if not choices:
         raise RuntimeError(f"MiniMax 返回缺少 choices: {data}")
     message = choices[0].get("message") or {}
-    return _clean_model_text(message.get("content") or "")
+    raw = _message_content_to_str(message.get("content"))
+    if not (raw or "").strip():
+        raw = _delta_text_chunk(message)  # 少数实现把片段放在与 delta 同形字段里
+    return _clean_model_text(raw)
 
 
 def _call_openai_compatible_stream(
@@ -124,8 +174,15 @@ def _call_openai_compatible_stream(
                 choices = obj.get("choices") or []
                 if not choices:
                     continue
-                delta = choices[0].get("delta") or {}
-                chunk = delta.get("content") or ""
+                ch0 = choices[0] if isinstance(choices[0], dict) else {}
+                delta = ch0.get("delta") or {}
+                chunk = _delta_text_chunk(delta)
+                if not chunk:
+                    msg = ch0.get("message") or {}
+                    if isinstance(msg, dict):
+                        chunk = _message_content_to_str(msg.get("content"))
+                if not chunk and isinstance(ch0.get("text"), str):
+                    chunk = ch0["text"]
                 if chunk:
                     yield chunk
     except error.HTTPError as e:
@@ -859,6 +916,25 @@ def stream_answer_with_graph_and_files(
         return
 
     answer = _clean_model_text("".join(chunks))
+    if not answer:
+        # 部分厂商流式仅填充 reasoning_details / 或非标准分片，回退一次非流式补全
+        try:
+            answer = _call_minimax_openai_compatible(
+                api_key=api_key,
+                base_url=base_url,
+                model=model,
+                system=prompt["system"],
+                user_payload=prompt["user_payload"],
+                timeout_sec=timeout_sec,
+            )
+            answer = _clean_model_text(answer)
+        except Exception as e:
+            logger.warning("智能回答流式无文本，非流式回退失败: %s", e)
+            yield {
+                "type": "error",
+                "message": f"模型未返回有效内容（流式解析为空且非流式回退失败：{e}）。",
+            }
+            return
     if not answer:
         yield {"type": "error", "message": "模型未返回有效内容。"}
         return

@@ -50,6 +50,8 @@ LAYER_PREDICATES: Dict[str, Callable[[str], bool]] = {
 SECTOR_LABELS = {
     "PRD_AL": "电解铝（PRD_AL）",
     "PRD_AO": "氧化铝（PRD_AO）",
+    "PRD_RD": "热电（PRD_RD）",
+    "PUR": "采购（PUR）",
 }
 
 
@@ -61,6 +63,10 @@ def _sector_from_file_path(fp: str) -> str:
         return "氧化铝"
     if "prd_al" in low or "prd-al" in low:
         return "电解铝"
+    if "prd_rd" in low or "prd-rd" in low:
+        return "热电"
+    if "governance_db://pur/" in low or "/data/pur/" in low:
+        return "采购"
     return ""
 
 

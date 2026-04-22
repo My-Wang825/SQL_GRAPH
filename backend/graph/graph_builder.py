@@ -5,6 +5,21 @@ from collections import defaultdict
 from ..models import TableNode, RelationEdge
 
 
+def _preferred_file_path(prev: str, new: str) -> str:
+    """合并多脚本来源时：优先治理虚拟路径，避免本地 data/ 绝对路径盖住 governance_db。"""
+    p = (prev or "").strip()
+    n = (new or "").strip()
+    if not n:
+        return p
+    if not p:
+        return n
+    if n.lower().startswith("governance_db://"):
+        return n
+    if p.lower().startswith("governance_db://"):
+        return p
+    return p
+
+
 class GraphBuilder:
     def __init__(self):
         self.tables: Dict[str, TableNode] = {}
@@ -29,8 +44,9 @@ class GraphBuilder:
             else:
                 if t.get("comment"):
                     self.tables[tid].comment = t["comment"]
-                if t.get("file_path") and not self.tables[tid].file_path:
-                    self.tables[tid].file_path = t["file_path"]
+                nf = (t.get("file_path") or "").strip()
+                if nf:
+                    self.tables[tid].file_path = _preferred_file_path(self.tables[tid].file_path, nf)
 
     def add_relations_from_parse(self, relation_list: List[dict]) -> None:
         # 暂存原始关系，最后统一去重/聚合/标记

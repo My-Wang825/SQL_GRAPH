@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电解铝 · 数据血缘图谱（2D 兼容）</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-al" data-sector="PRD_AL">
+    <div class="app">
+        <header class="header">
+            <div class="header-brand">
+                <h1>电解铝 · 数据血缘（2D 兼容模式）</h1>
+                <span class="sector-badge sector-badge-al">PRD_AL</span>
+            </div>
+            <div class="toolbar">
+                <input type="text" id="search-input" class="search-input" placeholder="搜索表名或注释...">
+                <div class="filter-group" title="筛选层级">
+                    <span class="filter-label">层</span>
+                    <label class="filter-check"><input type="checkbox" class="layer-check" value="ods" checked> ODS</label>
+                    <label class="filter-check"><input type="checkbox" class="layer-check" value="dwd" checked> DWD/DWS</label>
+                    <label class="filter-check"><input type="checkbox" class="layer-check" value="dm" checked> DM</label>
+                    <label class="filter-check"><input type="checkbox" class="layer-check" value="ads" checked> ADS</label>
+                </div>
+                <span class="layout-hint">3D 依赖不可用时自动切换</span>
+                <span id="graph-stats" class="graph-stats">0 节点 / 0 边</span>
+                <button type="button" id="btn-refresh" class="btn">刷新</button>
+                <a href="index.html" class="sector-switch" title="返回 3D 模式">3D</a>
+                <a href="ao.html" class="sector-switch">氧化铝</a>
+                <a href="rd.html" class="sector-switch">热电</a>
+                <a href="pur.html" class="sector-switch">采购</a>
+            </div>
+        </header>
+        <button type="button" id="agent-fab" class="agent-fab" title="智能问答" aria-expanded="false" aria-controls="agent-drawer">
+            <span class="agent-fab-icon" aria-hidden="true">💬</span>
+            <span class="agent-fab-text">智能问答</span>
+        </button>
+        <main class="main" id="main-workspace">
+            <div class="main-graph-wrap" id="main-graph-wrap">
+            <div id="graph-container"></div>
+            <aside id="detail-panel" class="detail-panel" style="display: none;">
+                <div class="panel-header">
+                    <h3 id="panel-title">表详情</h3>
+                    <button type="button" id="panel-close" class="btn-close">&times;</button>
+                </div>
+                <div id="panel-content" class="panel-content"></div>
+            </aside>
+            </div>
+        </main>
+        <div id="agent-drawer-backdrop" class="agent-drawer-backdrop" aria-hidden="true"></div>
+        <aside id="agent-drawer" class="agent-drawer" role="dialog" aria-modal="false" aria-labelledby="agent-drawer-title" aria-hidden="true">
+            <div class="agent-drawer-header">
+                <h2 id="agent-drawer-title" class="agent-drawer-title">智能问答</h2>
+                <button type="button" id="agent-drawer-close" class="agent-drawer-close" title="关闭">&times;</button>
+            </div>
+            <div class="agent-quick-row" id="agent-quick-row" aria-label="快捷提问"></div>
+            <div id="agent-chat-log" class="agent-chat-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+            <div class="agent-compose">
+                <label class="visually-hidden" for="agent-input">输入问题</label>
+                <textarea id="agent-input" class="agent-input" rows="3" placeholder="例如：ads_prd_al_finan_wtable_ufl 的上游有哪些表？"></textarea>
+                <div class="agent-compose-actions">
+                    <button type="button" id="agent-clear-input" class="btn btn-secondary">清空</button>
+                    <button type="button" id="agent-send" class="btn">发送</button>
+                </div>
+            </div>
+        </aside>
+        <div id="tooltip" class="tooltip" style="display: none;"></div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

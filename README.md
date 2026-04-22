@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQL 知识图谱系统
 
 基于数据集 `data` 与《sql-knowledge-graph-prompt.md》规格开发的 SQL 知识图谱系统。系统自动解析 SQL 脚本（支持 ETL 风格的 INSERT/SELECT/JOIN），提取表与表之间的数据流与 JOIN 关系，并以前端力导向图方式展示与查询。
@@ -209,3 +210,7 @@ SQL-graph/
 
 **文档版本**：1.1  
 **适用场景**：基于现有 SQL 脚本（尤其是 ETL）构建表级知识图谱、理解库表依赖与数据流。
+=======
+# SQL_GRAPH
+sql知识图谱
+>>>>>>> origin/main

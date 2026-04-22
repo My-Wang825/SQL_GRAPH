@@ -27,10 +27,15 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 SECTOR_DATA_DIRS = {
     "PRD_AL": os.path.join(BASE_DIR, "data", "PRD_AL"),
     "PRD_AO": os.path.join(BASE_DIR, "data", "PRD_AO"),
+    "PRD_RD": os.path.join(BASE_DIR, "data", "PRD_RD"),
+    "PUR": os.path.join(BASE_DIR, "data", "PUR"),
 }
 
-# 支持的 SQL 文件扩展名
+# 支持的 SQL 文件扩展名（全板块通用）
 SQL_EXTENSIONS = (".sql", ".txt")
+
+# 电解铝/氧化铝/热电：本地 data/<板块>/ 还可扫描 .py；解析时剔除 Python「from … import …」行，避免误当作 SQL FROM（见 etl_sql_parser）
+SECTOR_LOCAL_PY_SCRIPT_CODES = frozenset({"PRD_AL", "PRD_AO", "PRD_RD"})
 
 # 解析器配置
 PARSER_CONFIG = {
@@ -40,6 +45,48 @@ PARSER_CONFIG = {
 
 # 图谱元数据
 GRAPH_VERSION = "1.0"
+
+# 治理平台数据库连接（.env 中 DB_PASSWORD 含 # 时须写为 DB_PASSWORD="…"）
+DB_HOST = os.environ.get("DB_HOST", "").strip()
+DB_PORT = int(os.environ.get("DB_PORT", "3306") or "3306")
+DB_USER = os.environ.get("DB_USER", "").strip()
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "").strip()
+DB_NAME = os.environ.get("DB_NAME", "").strip()
+
+
+def _env_truthy(name: str, default: bool = False) -> bool:
+    raw = (os.environ.get(name, "") or "").strip()
+    if not raw:
+        return default
+    return raw.lower() in ("1", "true", "yes", "on")
+
+
+# 治理库查询失败时是否回退到仓库 data/<板块>/ 下本地 SQL（默认否，图谱仅来自库表 content）
+GRAPH_LOCAL_SQL_FALLBACK = _env_truthy("GRAPH_LOCAL_SQL_FALLBACK", default=False)
+
+# 4 个治理板块映射：sector_code -> project_id + 名称 + 文件名过滤关键字
+GOVERNANCE_SECTOR_RULES = {
+    "PRD_AL": {
+        "project_id": "12",
+        "project_name": "电解铝",
+        "exclude_name_keywords": ["补数"],
+    },
+    "PRD_AO": {
+        "project_id": "13",
+        "project_name": "氧化铝",
+        "exclude_name_keywords": ["test", "补数"],
+    },
+    "PRD_RD": {
+        "project_id": "14",
+        "project_name": "热电",
+        "exclude_name_keywords": ["补数"],
+    },
+    "PUR": {
+        "project_id": "8",
+        "project_name": "采购",
+        "exclude_name_keywords": ["test"],
+    },
+}
 
 def _pick_env(*keys: str, default: str = "") -> str:
     for key in keys:

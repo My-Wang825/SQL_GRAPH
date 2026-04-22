@@ -50,6 +50,35 @@ SQL_KEYWORDS = {
     "all", "case", "when", "then", "else", "end", "as", "with", "into",
 }
 
+# 行首为 Python「from 模块 import …」时，与 SQL「FROM 表」区分：整行不参与 SQL 正则匹配
+_RE_LINE_START_PYTHON_FROM_IMPORT = re.compile(
+    r"^[ \t]*from\s+(?:\.\s*)?[\w.]+\s+import\b",
+    re.IGNORECASE,
+)
+
+
+def _strip_python_from_import_lines(content: str) -> str:
+    """
+    在 .py 宿主文件中，将形如
+      from typing import List, Dict, Any
+      from urllib.parse import url
+    的 Python 导入行整行清空（保留换行），避免被 FROM_JOIN 等规则误识别为 SQL。
+    SQL 的 FROM 后接表名/子查询，不会紧跟关键字 import。
+    """
+    parts: List[str] = []
+    for raw in content.splitlines(keepends=True):
+        core = raw.rstrip("\r\n")
+        if _RE_LINE_START_PYTHON_FROM_IMPORT.match(core):
+            if raw.endswith("\r\n"):
+                parts.append("\r\n")
+            elif raw.endswith("\n"):
+                parts.append("\n")
+            else:
+                parts.append("\n")
+        else:
+            parts.append(raw)
+    return "".join(parts)
+
 
 def _normalize_table(s: str) -> str:
     """去掉反引号和 schema，只保留表名"""
@@ -120,12 +149,22 @@ class ETLSqlParser:
         return self.parse_content(content, str(path))
 
     def parse_content(
-        self, content: str, source_path: str = ""
+        self,
+        content: str,
+        source_path: str = "",
+        *,
+        python_host_file: bool | None = None,
     ) -> Tuple[List[dict], List[dict], str]:
         """
         解析 SQL 内容。
+        若宿主为 .py（由路径推断或 python_host_file=True），先剔除 Python「from … import …」行，
+        再按 SQL 规则解析，避免 `from typing import …` 等与 SQL FROM 混淆。
         返回: (表信息列表, 关系列表, 描述注释)
         """
+        path_lower = (source_path or "").lower()
+        is_py = bool(python_host_file) if python_host_file is not None else path_lower.endswith(".py")
+        if is_py:
+            content = _strip_python_from_import_lines(content)
         comment = _extract_comment_from_sql(content)
         tables_found: Dict[str, dict] = {}
         relations: List[dict] = []
@@ -213,6 +252,7 @@ class ETLSqlParser:
                         "confidence": 0.9,
                         "strength": 70,
                         "reason": "INSERT-SELECT 数据流",
+                        "file_path": source_path,
                     })
 
         table_list = [{"name": v["name"], "comment": v.get("comment", ""), "file_path": v.get("file_path", "")} for v in tables_found.values()]

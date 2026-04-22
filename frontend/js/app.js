@@ -472,6 +472,10 @@
     ================================================================ */
     let allNodes = [], allLinks = [];
     let filteredNodes = [], filteredLinks = [];
+    let visibleNodeIds = new Set();
+    let visibleDisplayLinkKeys = new Set();
+    let visibleLogicalLinks = [];
+    let visibleDisplayLinks = [];
     /** 当前筛选下各节点可见边数 / 全图边数（用于标签，避免“有数字却无线”） */
     let degreeVisible = {}, degreeFull = {};
     let sim = null, svgEl = null, svgG = null;
@@ -492,9 +496,33 @@
 
     const SECTOR = (document.body.dataset.sector || "PRD_AL").toUpperCase().replace(/-/g, "_");
 
+    function isNodeShown(d) {
+        return visibleNodeIds.has(d.id);
+    }
+
+    function isDisplayLinkShown(dl) {
+        return visibleDisplayLinkKeys.has(dl._dkey);
+    }
+
+    function updateStats(compInfo) {
+        const statsEl = document.getElementById("graph-stats");
+        if (!statsEl) return;
+        const info = compInfo || computeUndirectedComponents(filteredNodes, filteredLinks);
+        const blk = info.k > 1 ? ` · ${info.k} 个独立区块` : "";
+        statsEl.textContent = `${filteredNodes.length} 节点 / ${filteredLinks.length} 条关系${blk}`;
+    }
+
+    function syncVisibilityToSelections() {
+        if (!nodeSel || !linkSel) return;
+        nodeSel.style("display", d => isNodeShown(d) ? null : "none");
+        nodeSel.select(".node-label-sub").text(d => assocLabel(d));
+        linkSel.style("display", dl => isDisplayLinkShown(dl) ? null : "none");
+    }
+
     /** 电解铝 / 氧化铝共用同一套图谱配色（节点类型色、边箭头、血缘高亮描边） */
     const GRAPH_THEME = {
         core: "#2d5a9e", dictionary: "#2e8b57", junction: "#c17a3a", temp: "#5a5a6e",
+        dwd: "#e84a8a",
         /* 指标平台 DATASET 节点（与治理表对齐后出现） */
         metricsDataset: "#ab47bc",
         /* 库视图（表名 v_ 前缀）：紫系，与核心蓝表区分 */
@@ -505,6 +533,59 @@
         nodeStrokeUp: "#4dd0e1", nodeStrokeDown: "#ffb74d", nodeStrokeBoth: "#e1bee7",
     };
     const C = GRAPH_THEME;
+
+    function isMetricsOnlyNode(n) {
+        if (!n) return false;
+        if ((n.tableType || "") === "metrics_dataset") return true;
+        return String(n.id || "").indexOf("__metric_ds__") === 0;
+    }
+    function isMetricsDualNode(n) {
+        return !!(n && n.metricsSameAsDataset);
+    }
+    function splitGradientId(id) {
+        return "mgrad-" + String(id).replace(/[^a-zA-Z0-9_-]/g, "_");
+    }
+    function governanceNodeColor(n) {
+        const nm = (n.name || "").toLowerCase();
+        const baseName = tableBaseName(n.name || "");
+        if (baseName.startsWith("dwd_") || baseName.startsWith("dws_")) return C.dwd;
+        if (nm.startsWith("v_") || (n.tableType || "") === "view") return C.view;
+        const t = n.tableType || "core";
+        if (t === "dictionary") return C.dictionary;
+        if (t === "junction") return C.junction;
+        if (t === "temp") return C.temp;
+        return C.core;
+    }
+    function defaultNodeFill(d) {
+        if (isMetricsDualNode(d)) return "url(#" + splitGradientId(d.id) + ")";
+        return nodeColor(d);
+    }
+    function roleBrightnessColor(base, role) {
+        if (role === "center") return base;
+        try {
+            const c = d3.rgb(base);
+            if (role === "upstream") return c.brighter(0.45).formatHex();
+            if (role === "downstream") return c.brighter(0.3).formatHex();
+            if (role === "both") return c.brighter(0.38).formatHex();
+        } catch (e) { /* ignore */ }
+        return base;
+    }
+    function updateDualGradientStops(d, role) {
+        const el = d3.select("#" + splitGradientId(d.id));
+        if (el.empty()) return;
+        const a = roleBrightnessColor(governanceNodeColor(d), role);
+        const b = roleBrightnessColor(C.metricsDataset, role);
+        el.selectAll("stop")
+            .attr("stop-color", (_, i) => (i < 2 ? a : b));
+    }
+    function resetDualGradientStops(d) {
+        const el = d3.select("#" + splitGradientId(d.id));
+        if (el.empty()) return;
+        const a = governanceNodeColor(d);
+        const b = C.metricsDataset;
+        el.selectAll("stop")
+            .attr("stop-color", (_, i) => (i < 2 ? a : b));
+    }
 
     /* ================================================================
        入口
@@ -676,7 +757,7 @@
                 while (true) {
                     const { value, done } = await reader.read();
                     if (done) break;
-                    buf += decoder.decode(value, { stream: true });
+                    buf += decoder.decode(value, { stream: true }).replace(/\r\n/g, "\n");
                     let splitIdx = buf.indexOf("\n\n");
                     while (splitIdx >= 0) {
                         const block = buf.slice(0, splitIdx).trim();
@@ -684,24 +765,53 @@
                         if (block.startsWith("data:")) {
                             const dataStr = block.slice(5).trim();
                             if (dataStr) {
+                                let evt;
                                 try {
-                                    const evt = JSON.parse(dataStr);
-                                    if (evt.type === "delta") {
-                                        streamedText += evt.text || "";
-                                        const md = thinking.querySelector(".agent-md");
-                                        if (md) md.innerHTML = renderAgentMarkdown(streamedText);
-                                        if (log) log.scrollTop = log.scrollHeight;
-                                    } else if (evt.type === "done") {
-                                        donePayload = evt;
-                                    } else if (evt.type === "error") {
-                                        throw new Error(evt.message || "stream_error");
-                                    }
-                                } catch (e) {
-                                    /* ignore malformed event */
+                                    evt = JSON.parse(dataStr);
+                                } catch (_parseErr) {
+                                    evt = null;
+                                }
+                                if (!evt) {
+                                    /* 跳过无法解析的 SSE 帧 */
+                                } else if (evt.type === "error") {
+                                    throw new Error(evt.message || "智能回答失败");
+                                } else if (evt.type === "delta") {
+                                    streamedText += evt.text || "";
+                                    const md = thinking.querySelector(".agent-md");
+                                    if (md) md.innerHTML = renderAgentMarkdown(streamedText);
+                                    if (log) log.scrollTop = log.scrollHeight;
+                                } else if (evt.type === "done") {
+                                    donePayload = evt;
                                 }
                             }
                         }
                         splitIdx = buf.indexOf("\n\n");
+                    }
+                }
+                buf = buf.replace(/\r\n/g, "\n");
+                buf += decoder.decode(new Uint8Array(), { stream: false }).replace(/\r\n/g, "\n");
+                if (buf.trim()) {
+                    const tail = buf.trim();
+                    if (tail.startsWith("data:")) {
+                        const dataStr = tail.slice(5).trim();
+                        if (dataStr) {
+                            let evt;
+                            try {
+                                evt = JSON.parse(dataStr);
+                            } catch (_parseErr) {
+                                evt = null;
+                            }
+                            if (evt) {
+                                if (evt.type === "error") {
+                                    throw new Error(evt.message || "智能回答失败");
+                                }
+                                if (evt.type === "delta") {
+                                    streamedText += evt.text || "";
+                                } else if (evt.type === "done") {
+                                    donePayload = evt;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -724,10 +834,13 @@
                 const panel = document.getElementById("detail-panel");
                 if (panel) panel.style.display = "none";
                 paintVisualState();
-            } catch (_e) {
+            } catch (e) {
                 const th = document.getElementById("agent-stream-answer");
                 if (th) th.remove();
-                appendChatMessage("agent", "请求失败，请确认后端已启动（接口 `/api/agent/ask/stream`）。", null);
+                const detail = e && e.message ? String(e.message).trim() : "";
+                const fallback =
+                    "请求失败：请确认后端已启动且可访问 `/api/agent/ask/stream`（浏览器控制台 Network 可查看响应）。";
+                appendChatMessage("agent", detail ? detail : fallback, null);
                 clearAgentHighlight();
                 paintVisualState();
             } finally {
@@ -829,18 +942,76 @@
             });
     }
 
+    function _graphErrorHtml(message) {
+        return (
+            "<div class=\"graph-error\" style=\"padding:40px;text-align:center;color:#e0a0a0;max-width:56em;margin:0 auto;font-size:14px;line-height:1.5\">" +
+            String(message).replace(/</g, "&lt;") +
+            "</div>"
+        );
+    }
+    function _detailFromErrorPayload(data) {
+        if (!data || data.detail == null) return "";
+        const d = data.detail;
+        if (typeof d === "string") return d;
+        if (Array.isArray(d) && d[0] && d[0].msg) return d.map((x) => x.msg).join("; ");
+        return JSON.stringify(d);
+    }
+
     function fetchGraph() {
         const url = "/api/graph?sector=" + encodeURIComponent(SECTOR);
+        const gc = document.getElementById("graph-container");
         fetch(url)
-            .then(r => r.json())
-            .then(data => {
+            .then((r) => r.json().then((data) => ({ ok: r.ok, status: r.status, data })))
+            .then(({ ok, status, data }) => {
+                const statsEl = document.getElementById("graph-stats");
+                if (!ok) {
+                    const det = _detailFromErrorPayload(data) || "请求失败";
+                    if (gc) gc.innerHTML = _graphErrorHtml("图谱接口错误（" + status + "）：" + det);
+                    if (statsEl) statsEl.textContent = "0 节点 / 0 边";
+                    allNodes = [];
+                    allLinks = [];
+                    return;
+                }
                 allNodes = data.nodes || [];
-                allLinks = (data.links || []).map(l => ({ ...l }));
+                allLinks = (data.links || []).map((l) => ({ ...l }));
+                if (!allNodes.length) {
+                    if (statsEl) statsEl.textContent = "0 节点 / 0 边";
+                    const src = (data.meta && data.meta.governanceSource) || {};
+                    const mode = src.mode || "";
+                    if (mode === "local_fallback" && src.dbError) {
+                        if (gc) {
+                            gc.innerHTML = _graphErrorHtml(
+                                "仅本地回退时仍无数据：" + (src.dbError || "") + "。请检查 data 目录中是否有可解析的 .sql/.txt。"
+                            );
+                        }
+                        return;
+                    }
+                    if (gc) {
+                        const hintP =
+                            "该板块下未解析到任何表节点。请确认：治理平台中对应项目已有 SQL 脚本；或在本仓库 " +
+                            "<code>data/" +
+                            SECTOR +
+                            "/</code> 下放入 ETL 样例后刷新（若库中无数据会自动读本地补充）。";
+                        gc.innerHTML =
+                            '<div class="graph-error" style="padding:40px;max-width:56em;margin:0 auto">' +
+                            '<p style="color:#e0a0a0;font-size:14px;margin:0 0 12px">当前板块图谱为空（0 个节点）。</p>' +
+                            '<p style="color:#aaa;font-size:13px;line-height:1.5;margin:0">' +
+                            hintP +
+                            "</p></div>";
+                    }
+                    return;
+                }
+                render();
                 doFilter();
             })
-            .catch(() => {
-                document.getElementById("graph-container").innerHTML =
-                    "<div style='padding:40px;text-align:center;color:#aaa'>无法加载图谱，请确保后端已启动。</div>";
+            .catch((e) => {
+                const st = document.getElementById("graph-stats");
+                if (st) st.textContent = "0 节点 / 0 边";
+                if (gc) {
+                    gc.innerHTML = _graphErrorHtml(
+                        "无法连接图谱服务（" + (e && e.message ? e.message : "网络或解析错误") + "），请确认后端已启动且从 http 页面访问（非 file://）。"
+                    );
+                }
             });
     }
 
@@ -874,12 +1045,26 @@
 
     function doFilter() {
         const nIds = new Set();
-        filteredNodes = allNodes.filter(n => { if (layerVisible(n)) { nIds.add(n.id); return true; } });
+        filteredNodes = allNodes.filter(n => {
+            if (layerVisible(n)) {
+                nIds.add(n.id);
+                return true;
+            }
+            return false;
+        });
 
         filteredLinks = allLinks.filter(l => {
             if (!nIds.has(linkSrc(l))) return false;
             if (!nIds.has(linkDst(l))) return false;
             return true;
+        });
+
+        // 全图度数（不受层筛选影响，仅用于提示）
+        const fullDeg = {};
+        allLinks.forEach(l => {
+            const s = linkSrc(l), t = linkDst(l);
+            fullDeg[s] = (fullDeg[s] || 0) + 1;
+            fullDeg[t] = (fullDeg[t] || 0) + 1;
         });
 
         // 当前筛选下可见边对应的度数；与后端 relationCount 可能不一致（例如目标表所在层被关掉）
@@ -889,23 +1074,26 @@
             visDeg[s] = (visDeg[s] || 0) + 1;
             visDeg[t] = (visDeg[t] || 0) + 1;
         });
-        // 全图度数（不受层筛选影响，仅用于提示）
-        const fullDeg = {};
-        allLinks.forEach(l => {
-            const s = linkSrc(l), t = linkDst(l);
-            fullDeg[s] = (fullDeg[s] || 0) + 1;
-            fullDeg[t] = (fullDeg[t] || 0) + 1;
-        });
-        // 保留所有通过层级筛选的已识别表节点（含无边孤立点，保证完整展示）
+        visibleNodeIds = new Set(filteredNodes.map(n => n.id));
+        visibleLogicalLinks = filteredLinks.slice();
+        visibleDisplayLinks = buildDisplayLinks(filteredLinks);
+        visibleDisplayLinkKeys = new Set(visibleDisplayLinks.map(dl => dl._dkey));
+
         degreeVisible = visDeg;
         degreeFull = fullDeg;
 
-        // 切换筛选时清除历史选中高亮，避免误以为“控件失效”
-        selId = null;
         const panel = document.getElementById("detail-panel");
-        if (panel) panel.style.display = "none";
+        if (selId && !visibleNodeIds.has(selId)) {
+            selId = null;
+            if (panel) panel.style.display = "none";
+        } else if (selId) {
+            const selected = lastNodeById[selId];
+            if (selected && panel) showPanel(selected, visibleDisplayLinks);
+        }
 
-        render();
+        updateStats();
+        syncVisibilityToSelections();
+        paintVisualState();
     }
 
     /* ================================================================
@@ -915,28 +1103,23 @@
         const gc = document.getElementById("graph-container");
         const W = gc && gc.clientWidth ? gc.clientWidth : window.innerWidth;
         const H = Math.max(220, (gc && gc.clientHeight ? gc.clientHeight : window.innerHeight - 56));
-        const statsEl = document.getElementById("graph-stats");
 
         if (sim) sim.stop();
         layoutLocked = false;
         focusLinkOverlayG = null;
 
         d3.select("#graph-container").node().innerHTML = "";
-        if (!filteredNodes.length) {
+        if (!allNodes.length) {
             d3.select("#graph-container").append("div")
                 .style("padding", "40px").style("text-align", "center").style("color", "#aaa")
                 .text("当前过滤条件下无数据，请调整筛选条件。");
             return;
         }
 
-        const compInfo = computeUndirectedComponents(filteredNodes, filteredLinks);
-        if (statsEl) {
-            const blk = compInfo.k > 1 ? ` · ${compInfo.k} 个独立区块` : "";
-            statsEl.textContent = `${filteredNodes.length} 节点 / ${filteredLinks.length} 条关系${blk}`;
-        }
+        const compInfo = computeUndirectedComponents(allNodes, allLinks);
 
         // 克隆节点（避免污染原始数据），预先写入布局尺寸
-        const nodes = filteredNodes.map(n => {
+        const nodes = allNodes.map(n => {
             const o = { ...n };
             setNodeLayoutSize(o);
             return o;
@@ -945,7 +1128,7 @@
         nodes.forEach(n => { nodeById[n.id] = n; });
         lastNodeById = nodeById;
 
-        const links = filteredLinks.map((l, i) => ({ ...l, _ekey: "e" + i }));
+        const links = allLinks.map((l, i) => ({ ...l, _ekey: "e" + i }));
         const displayLinks = buildDisplayLinks(links);
 
         /* 同层合并组的内聚弹簧：不渲染，仅参与力仿真，把同组源节点拉拢成簇 */
@@ -1076,24 +1259,7 @@
                 document.getElementById("detail-panel").style.display = "none";
             });
 
-        if (grid.slotRects && grid.slotRects.length) {
-            svgG.append("g")
-                .attr("class", "cluster-slots")
-                .selectAll("rect")
-                .data(grid.slotRects)
-                .join("rect")
-                .attr("x", d => d.x)
-                .attr("y", d => d.y)
-                .attr("width", d => d.w)
-                .attr("height", d => d.h)
-                .attr("rx", 10)
-                .attr("ry", 10)
-                .attr("fill", "rgba(18, 24, 42, 0.45)")
-                .attr("stroke", "rgba(100, 130, 200, 0.28)")
-                .attr("stroke-width", 1)
-                .attr("stroke-dasharray", "10,7")
-                .style("pointer-events", "none");
-        }
+        // 分区槽位仅用于布局计算，不再绘制可视化虚框，避免干扰阅读。
 
         // 多连通块：分区槽位 + 强锚定，避免无连通的块混成一团
         sim = d3.forceSimulation(nodes)
@@ -1131,6 +1297,23 @@
         appendArrowMarker("arr-down", C.markerDown);
         appendArrowMarker("arr-cross", C.markerCross);
 
+        nodes.forEach(n => {
+            if (!n.metricsSameAsDataset) return;
+            const lg = governanceNodeColor(n);
+            const rg = C.metricsDataset;
+            const grad = defs.append("linearGradient")
+                .attr("id", splitGradientId(n.id))
+                .attr("gradientUnits", "objectBoundingBox")
+                .attr("x1", "0%")
+                .attr("x2", "100%")
+                .attr("y1", "0%")
+                .attr("y2", "0%");
+            grad.append("stop").attr("offset", "0%").attr("stop-color", lg);
+            grad.append("stop").attr("offset", "50%").attr("stop-color", lg);
+            grad.append("stop").attr("offset", "50%").attr("stop-color", rg);
+            grad.append("stop").attr("offset", "100%").attr("stop-color", rg);
+        });
+
         function linkStrokeWidth(dl) {
             const mc = dl._mergedCount || 1;
             if (mc > 1) return Math.min(3.8, 1.6 + 0.45 * Math.log2(mc));
@@ -1138,10 +1321,34 @@
             return Math.min(2.4, 1 + 0.35 * Math.log2(w + 1));
         }
 
+        function refreshFocusOverlayPaths() {
+            if (!focusLinkOverlayG) return;
+            focusLinkOverlayG.selectAll("path").attr("d", d => {
+                const sNode = nodeById[d.s];
+                const tNode = nodeById[d.t];
+                if (!sNode || !tNode || sNode.x == null || tNode.x == null) return "";
+                const selfDl = {
+                    _mergedCount: 1,
+                    _srcIds: [d.s],
+                    _dkey: `fo:${d.s}:${d.t}`,
+                    relationType: d.relationType || "DATA_FLOW",
+                };
+                return singleEdgePath(
+                    sNode,
+                    tNode,
+                    linkHashSeed(selfDl._dkey),
+                    displayLinks,
+                    selfDl,
+                    nodeById
+                );
+            });
+        }
+
         function updateGraphGeometry() {
             if (linkSel) {
                 linkSel.attr("d", l => linkBundledPathMerged(l, nodeById, displayLinks));
             }
+            refreshFocusOverlayPaths();
             if (nodeSel) {
                 nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
             }
@@ -1197,7 +1404,7 @@
                 clearAgentHighlight();
                 selId = d.id;
                 paintVisualState();
-                showPanel(d, displayLinks);
+                showPanel(d, visibleDisplayLinks);
             })
             .on("mouseover", (e, d) => showTip(e, d))
             .on("mouseout",  hideTip);
@@ -1205,25 +1412,18 @@
         nodeSel.append("ellipse")
             .attr("class", "node-shape")
             .attr("rx", d => d.__w / 2).attr("ry", 28)
-            .attr("fill", d => nodeColor(d))
+            .attr("fill", d => defaultNodeFill(d))
             .attr("stroke", C.strokeDefault).attr("stroke-width", 2);
 
         nodeSel.append("text").attr("text-anchor", "middle").attr("dy", -8)
+            .attr("class", "node-label-main")
             .attr("fill", "#fff").attr("font-size", "12px")
             .text(d => d.name || "");
 
         nodeSel.append("text").attr("text-anchor", "middle").attr("dy", 12)
+            .attr("class", "node-label-sub")
             .attr("fill", "rgba(255,255,255,0.75)").attr("font-size", "10px")
             .text(d => assocLabel(d));
-
-        /* 指标平台：表名与 DATASET vertexId 一致时仅标注、不连冗余边 */
-        nodeSel.append("circle")
-            .attr("class", "metric-dataset-same-badge")
-            .attr("r", d => d.metricsSameAsDataset ? 8 : 0)
-            .attr("cx", d => d.__w / 2 - 10)
-            .attr("cy", -20)
-            .attr("fill", d => d.metricsSameAsDataset ? C.metricsDataset : "none")
-            .style("display", d => d.metricsSameAsDataset ? null : "none");
 
         /* 边与箭头画在节点之上，避免箭头被椭圆填充盖住；端点已内缩，线体尽量少压节点 */
         linkSel = svgG.append("g").attr("class", "links")
@@ -1265,6 +1465,7 @@
             const s = nodes.find(n => n.id === selId);
             if (!s) selId = null;
         }
+        syncVisibilityToSelections();
         paintVisualState();
     }
 
@@ -1315,7 +1516,7 @@
             clearLineageFocusOverlay();
             return;
         }
-        const raw = lastLogicalLinks || [];
+        const raw = visibleLogicalLinks || [];
         const nodeById = lastNodeById;
         const displayLinks = lastDisplayLinks || [];
         const displayLinkByKey = new Map(displayLinks.map(dl => [dl._dkey, dl]));
@@ -1446,15 +1647,27 @@
     function applyHL() {
         if (!nodeSel || !linkSel) return;
         if (!selId) { resetHL(); return; }
-        const raw = lastLogicalLinks || [];
+        const raw = visibleLogicalLinks || [];
         const { directParents, directChildren, focusSet } = computeDirectNeighborhood(selId, raw);
         refreshLinkPaths();
 
         nodeSel.each(function (d) {
             const role = nodeFocusRole(d.id, selId, directParents, directChildren);
             const g = d3.select(this);
+            if (isMetricsDualNode(d)) {
+                if (role === "dim") {
+                    g.select(".node-shape")
+                        .attr("fill", DIM_NODE_FILL);
+                } else {
+                    updateDualGradientStops(d, role);
+                    g.select(".node-shape")
+                        .attr("fill", "url(#" + splitGradientId(d.id) + ")");
+                }
+            } else {
+                g.select(".node-shape")
+                    .attr("fill", nodeFillLineage(d, role));
+            }
             g.select(".node-shape")
-                .attr("fill", nodeFillLineage(d, role))
                 .attr("stroke", nodeStrokeLineage(d, role))
                 .attr("stroke-width", nodeStrokeWidthLineage(role))
                 .attr("opacity", focusSet.has(d.id) ? 1 : 0.72);
@@ -1482,8 +1695,11 @@
         clearLineageFocusOverlay();
         if (!nodeSel || !linkSel) return;
         refreshLinkPaths();
+        nodeSel.each(function (d) {
+            if (d.metricsSameAsDataset) resetDualGradientStops(d);
+        });
         nodeSel.select(".node-shape")
-            .attr("fill", d => nodeColor(d))
+            .attr("fill", d => defaultNodeFill(d))
             .attr("stroke", C.strokeDefault)
             .attr("stroke-width", 2)
             .attr("opacity", 1);
@@ -1501,7 +1717,7 @@
     function showPanel(d, links) {
         const panel = document.getElementById("detail-panel");
         const content = document.getElementById("panel-content");
-        const { directParents, directChildren } = computeDirectNeighborhood(d.id, lastLogicalLinks || []);
+        const { directParents, directChildren } = computeDirectNeighborhood(d.id, visibleLogicalLinks || []);
         const nIn = directParents.size;
         const nOut = directChildren.size;
         let nBoth = 0;
@@ -1583,14 +1799,8 @@
     });
 
     function nodeColor(n) {
-        const nm = (n.name || "").toLowerCase();
-        if (nm.startsWith("v_") || (n.tableType || "") === "view") return C.view;
-        const t = n.tableType || "core";
-        if (t === "metrics_dataset") return C.metricsDataset;
-        if (t === "dictionary") return C.dictionary;
-        if (t === "junction")   return C.junction;
-        if (t === "temp")       return C.temp;
-        return C.core;
+        if (isMetricsOnlyNode(n)) return C.metricsDataset;
+        return governanceNodeColor(n);
     }
 
     init();

@@ -59,6 +59,16 @@ body {
     color: #d1fae5;
 }
 
+.sector-badge-rd {
+    background: #7a3fb0;
+    color: #f3e8ff;
+}
+
+.sector-badge-pur {
+    background: #8a5a1f;
+    color: #fff4e5;
+}
+
 .sector-switch {
     font-size: 12px;
     color: #9fb3ff;
@@ -123,10 +133,27 @@ body {
 .filter-check {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
     cursor: pointer;
     white-space: nowrap;
     color: #ccc;
+}
+
+/* 图例整段与复选框并排，避免括号内色块在词中间断行 */
+.filter-check-text {
+    white-space: nowrap;
+}
+
+/* 3D 图谱图例：与 app-3d.js 中 layerColor 一致；色块在括号内紧跟色名 */
+.layer-swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin: 0 0 0 2px;
+    vertical-align: -0.1em;
+    background: var(--swatch, #888);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .filter-check input[type="checkbox"] {
@@ -198,7 +225,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(145deg, #3a6bb8 0%, #2d5a9e 55%, #234a82 100%);
+    background: #1890ff;
     box-shadow:
         0 4px 14px rgba(0, 0, 0, 0.45),
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
@@ -215,7 +242,7 @@ body {
 }
 
 .agent-fab.is-open {
-    background: linear-gradient(145deg, #4a7bc8 0%, #3d6aaf 100%);
+    background: #0f7fe8;
 }
 
 /* 抽屉打开时 FAB 让出抽屉宽度 */
@@ -630,10 +657,10 @@ body.agent-drawer-open .agent-fab {
 .detail-panel {
     position: absolute;
     top: 16px;
-    right: 16px;
+    left: 16px;
     width: 340px;
     max-height: calc(100% - 32px);
-    background: #252540;
+    background: rgba(18, 20, 34, 0.86);
     border: 1px solid #3a3a5a;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
@@ -702,4 +729,43 @@ body.agent-drawer-open .agent-fab {
     border-radius: 6px;
     background: #1e1e38;
     white-space: nowrap;
+}
+
+.graph3d-wrap {
+    position: relative;
+}
+
+#graph-3d {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    background: #111;
+}
+
+.graph3d-tips {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #bfc8e8;
+    background: rgba(17, 17, 17, 0.72);
+    border: 1px solid rgba(140, 160, 220, 0.28);
+    pointer-events: none;
+}
+
+.node-label-3d {
+    color: #e9efff;
+    font-size: 11px;
+    white-space: nowrap;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+    user-select: none;
+}
+
+.graph-error {
+    color: #ffcbcb;
+    padding: 24px;
+    font-size: 14px;
 }

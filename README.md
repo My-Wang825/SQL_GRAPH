@@ -89,6 +89,35 @@ python -m uvicorn backend.main:app --host 0.0.0.0 --port 8080
 
 ---
 
+## 快速验证（Smoke Test）
+
+每次升级依赖、切换浏览器环境或修改 `frontend/js/app-3d.js` 后，建议执行一次最小验证：
+
+1. 启动服务并打开 `http://localhost:8000/index.html`
+2. 强刷页面（`Ctrl+F5`）
+3. 检查顶部统计，需满足：`节点数 > 0` 且 `边数 > 0`
+4. 鼠标左键拖拽图谱区域，确认可旋转
+5. 滚轮缩放，确认镜头远近变化正常
+6. 在搜索框输入任一已知表名并回车，确认能定位节点
+
+通过标准：
+
+- 能看到 3D 节点与连线
+- 图谱可旋转、可缩放
+- 搜索可定位
+
+当前已验证稳定版本组合（3D 页面）：
+
+- `three@0.126.1`
+- `3d-force-graph@1.70.0`
+
+依赖加载策略：
+
+- 优先本地：`frontend/vendor/three.min.js`、`frontend/vendor/3d-force-graph.min.js`
+- 失败回退：`jsdelivr` 同版本 CDN
+
+---
+
 ## 项目文件及主要功能
 
 ### 项目结构
@@ -136,12 +165,12 @@ SQL-graph/
 | 模块 | 文件 | 功能说明 |
 |------|------|----------|
 | **入口与配置** | `backend/main.py` | 启动 FastAPI，挂载 CORS、API 路由、前端静态目录；`/` 返回前端，`/api/*` 走接口。 |
-| | `backend/config.py` | 项目根目录、`data` 目录、`SECTOR_DATA_DIRS`（`PRD_AL` / `PRD_AO` 子目录）、SQL 扩展名、图谱版本等。 |
+| | `backend/config.py` | 项目根目录、`data` 目录、`SECTOR_DATA_DIRS`（`PRD_AL` / `PRD_AO` / `PRD_RD` / `PUR` 子目录）、SQL 扩展名、图谱版本等。 |
 | **SQL 解析** | `backend/parser/etl_sql_parser.py` | 解析 ETL 风格 SQL：识别 `INSERT INTO`、`TRUNCATE`、`DELETE FROM`、`FROM`/`JOIN` 中的表名；从 `INSERT...SELECT...FROM/JOIN` 提取 **DATA_FLOW** 数据流关系；从文件头注释提取“描述”作为表注释。 |
 | **关系分析** | `backend/analyzer/relation_analyzer.py` | 对多文件解析结果做关系合并与去重，并按需要累加关系强度。 |
 | **图谱构建** | `backend/graph/graph_builder.py` | 全库合并后对相同 `(source, target)` 去重并累加 `weight`；**不做**传递闭包标记、**不做**共父源表剪枝，输出边均为解析得到的显式关系；节点含类型、注释、关联数等。 |
 | **数据模型** | `backend/models/*.py` | `TableNode`、`FieldNode`、`RelationEdge` 及 to_dict，供图谱 JSON 使用。 |
-| **API** | `backend/api/routes.py` | `GET /api/graph`：默认仅扫描 `data/PRD_AL`；`?sector=PRD_AO` 仅扫描 `data/PRD_AO`；亦可传 `data_dir`（须位于项目根目录内）。`POST /api/graph/build`：同上规则解析 `data_dir`。 |
+| **API** | `backend/api/routes.py` | `GET /api/graph?sector=…`：按板块请求；`?sector=PRD_AL` / `PRD_AO` / `PRD_RD` / `PUR` 时对应 `data/<代码>/` 本地回退与治理库 SQL；亦可传 `data_dir`（须位于项目根目录内）。`POST /api/graph/build`：同上规则解析 `data_dir`。 |
 | **前端** | `index.html` / `ao.html` + `css/styles.css` + `js/app.js` | 力导向；单块时全画布数仓分层；**多块时按连通分量分格 + 块内局部分层 + 强锚定簇心**，拉开无关联块；与电解铝/氧化铝共用配色与椭圆节点；保留层级勾选。 |
 
 ### 图谱展示方案（节点 / 关系规则与布局）
@@ -166,7 +195,7 @@ SQL-graph/
 
 ### 数据集说明
 
-- `data/PRD_AL`、`data/PRD_AO` 等为板块子目录，内含 ETL SQL（无 CREATE TABLE）：含 `INSERT INTO ... SELECT ... FROM ... JOIN`、`TRUNCATE`、`DELETE` 等。
+- `data/PRD_AL`、`data/PRD_AO`、`data/PRD_RD`、`data/PUR` 等为板块子目录，内含 ETL SQL（无 CREATE TABLE）：含 `INSERT INTO ... SELECT ... FROM ... JOIN`、`TRUNCATE`、`DELETE` 等。生产以治理平台库表 `content` 为准，本地目录多用于 `GRAPH_LOCAL_SQL_FALLBACK=1` 时回退或离线样例。
 - 浏览器打开 `/` 为电解铝图谱，`/ao.html` 为氧化铝图谱。
 - 解析器会从这些语句中抽取**表名**与**表关系**（数据流 + JOIN ON 列关联），并利用文件头 `描述：xxx` 作为表注释，用于图谱展示与搜索。
 

@@ -1,10 +1,10 @@
 ---
 name: sql-knowledge-graph
 description: >-
-  Implements table-level SQL knowledge graphs from ETL scripts (INSERT INTO … SELECT … FROM/JOIN),
-  DATA_FLOW edges, optional sector-scoped data dirs, FastAPI JSON API, and D3 force-directed UI.
-  Use when building warehouse lineage, migrating the SQL-graph stack to another repository,
-  parsing batch .sql/.txt for table dependencies, or aligning a new project with this pattern.
+  基于 ETL 脚本（INSERT INTO … SELECT … FROM/JOIN）构建表级 SQL 知识图谱，产出 DATA_FLOW 边、
+  可选按板块（sector）划分的数据目录、FastAPI JSON 接口与 D3 力导向前端。
+  适用于搭建数仓血缘、将 SQL-graph 规范迁移到其他仓库、批量解析 .sql/.txt 表依赖，
+  或让新项目与本套约定对齐。
 ---
 
 # SQL 知识图谱（可迁移规范）
@@ -42,11 +42,11 @@ description: >-
 
 HTTP 响应体顶层：
 
-- `nodes`：`array` of object，至少含 `id`、`name`、`tableType`、`comment`、`relationCount` 等（完整字段见 `reference.md`）。
-- `links`：`array` of object，`source` / `target` 为**与节点 `id` 一致的字符串**；含 `relationType`（主为 `DATA_FLOW`）、`weight`、`sources`、`isTransitive` 等。
-- `meta`：`object`，含 `version`、`tableCount`、`relationCount`；合并外部血缘后可附加自定义统计字段。
+- `nodes`：对象数组，至少含 `id`、`name`、`tableType`、`comment`、`relationCount` 等（完整字段见同目录 `reference.md`）。
+- `links`：对象数组，`source` / `target` 为**与节点 `id` 一致的字符串**；含 `relationType`（主为 `DATA_FLOW`）、`weight`、`sources`、`isTransitive` 等。
+- `meta`：对象，含 `version`、`tableCount`、`relationCount`；合并外部血缘后可附加自定义统计字段。
 
-前端应用 `body.dataset.sector`（或等价方式）选择板块，请求：
+前端用 `body.dataset.sector`（或等价方式）选择板块，请求：
 
 `GET /api/graph?sector=<CODE>`（`sector` 为空时使用配置的默认板块）。
 
@@ -72,15 +72,15 @@ HTTP 响应体顶层：
 
 ### 6. 前端最小约定
 
-- 使用 D3（或等价）力导向；从 `/api/graph?sector=…` 拉取 JSON。
-- 层级筛选、搜索、血缘高亮等行为与**节点 `id` 及 link 端点字符串**严格一致。
+- 使用 D3（或等价库）做力导向；从 `/api/graph?sector=…` 拉取 JSON。
+- 层级筛选、搜索、血缘高亮等行为与**节点 `id` 及边的端点字符串**严格一致。
 - 多板块：多入口 HTML，通过 `data-sector` 区分请求参数。
 
 ### 7. 配置与环境变量
 
 - **路径**：项目根、`DATA_DIR`、板块代码 → 目录映射表（白名单）。
 - **解析器**：默认 schema、是否规范化表名等，集中在单一配置模块。
-- **密钥类**：仅通过环境变量或 `.env`（不入库）。参考键名见仓库根目录 `.env.example` 说明；复制到新仓库时删除示例密钥。
+- **密钥类**：仅通过环境变量或 `.env`（勿提交仓库）。参考键名见仓库根目录 `.env.example`；复制到新仓库时勿保留真实密钥。
 
 ### 8. 依赖（Python）
 
@@ -90,7 +90,7 @@ HTTP 响应体顶层：
 
 1. 建立 `backend/`、`frontend/`、`data/<板块>/` 骨架，复制或重写解析器与 `GraphBuilder`，保证 **JSON 契约**与前端一致。
 2. 实现 `config`：`BASE_DIR`、板块映射、`SQL_EXTENSIONS`。
-3. 注册 FastAPI 路由：`/` 返回首页 HTML，`/` 静态挂载需在**显式路由之后**，避免覆盖 `/health`、`/api/*`。
+3. 注册 FastAPI 路由：`/` 返回首页 HTML；**先**注册显式路由（`/health`、`/api/*`），**再**挂载静态根路径，避免静态文件抢掉 API。
 4. 放置样例 SQL，调用 `GET /api/graph` 验证节点与边数量。
 5. 再按需加指标合并、Agent、缓存。
 

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "source": "brianlovin/claude-config",
+      "sourceType": "github",
+      "computedHash": "25872a21881a950edc3db1f3329664d60405d539660ce05b3265db2de06a7dfd"
+    },
+    "understand-anything-knowledge-graph": {
+      "source": "aradotso/trending-skills",
+      "sourceType": "github",
+      "computedHash": "f46d1f02a25e8662307f3b3c818917f242c34f7f2da8ceefce1aa9d9e03827fe"
+    }
+  }
+}

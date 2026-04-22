@@ -1,0 +1,6278 @@
+{
+  "success": true,
+  "code": "200",
+  "errorMsg": null,
+  "detailErrorMsg": null,
+  "traceId": "98ee531c-f912-495e-a291-95ca2fc54773",
+  "data": {
+    "vertexList": [
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ads_prd_al_finan_wtable_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ads_prd_ao_finan_wtable_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ads_prd_ao_waterbxt_consum_udf",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "calendar_hours",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "capacity",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_al_date",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_bd_material_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_bd_stordoc_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_bd_stordoc_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_bd_stordoc_with_category",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_bd_supplier_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_calendar_day",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_doc_type_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_dwd_pur_po_order_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_ly_org1",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_constr_project_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_dept_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_employee_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_employee_ufd_gl",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_employee_ufd_tj",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_orgs_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_org_orgs_ufd_ly_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_prd_org_flatten_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dim_supplier_enterprise_type",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_al_branch_company_d_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_al_branch_company_m_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_al_branfact_m_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_al_fact_d_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_ao_branfact_m_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_ao_fact_d_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_energy_consump_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_pv_gen_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_rd_fact_d_uid",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_prd_rd_fact_m_uid",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_pur_po_order_rxsrm_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dwd_pur_tender_project_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "dws_rd_cost_uid",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dim_bd_material_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dim_bd_supplier_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_bidd_tender_info_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_bidd_tender_info_ufd_invbid_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_bidd_tender_mat_info_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_gen_vend_info_md_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ic_material_ufd_bzd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ic_material_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ic_purchasein_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_info_rec_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_inventory_info_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ld_gyb_bad_cust_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ldgyb_hetong_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ldgyb_hetong_ufd_wc_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_ldgyb_zlfk_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_mrp_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_mt_inventory_ufd_hq_1",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_pr_item_tr_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_re_item_tr_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplier_deduct_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplier_matclass_amt_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplierbidbond_balance_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplierbidbond_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplierbiddingamount_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_supplierjoin_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_tender_clm_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_tender_effic_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_tender_project_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_tender_task_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_tender_task_wc_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_dwd_pur_urgent_req_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_prd_al_anode_carb_flowrate",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_ap_paybill_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_ic_purchasein_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_order_arrival_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_po_arriveorder_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_po_arriveorder_ufd_zsdh_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_po_invoice_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_po_order_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_qichu_inventory_ufd",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_vend_cate_link_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "fact_pur_vend_no_exec_ufd_hq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_al2o3_matlv",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_alumtap_prod",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_alumtap_prod_wh",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_branch_comp_mat",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_brfact_anode_cblk",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_bulk_al2o3_flow",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_calcsta_total_v_competition",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_calcsta_voltage",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_calcsta_voltage_total_voltage",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_material_flow",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_other_econ_index",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_pow_electqty",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_fill_prod_sales_volume_energy_consum",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_d_company_prodsales_prod",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_d_rawmat_inflow",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_d_rawmat_inventory",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_d_rawmat_inventory_al3wq",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_m_rawmat_power_consume",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "ly_rpt_y_rawmat_power_consume",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "prd_al_dim_time",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580115213299712",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580117092347904",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580118707154944",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580120321961984",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580121576058880",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580122624634880",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580123530604544",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005580124537237504",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581015868780544",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581023540162560",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581024546795520",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581025389850624",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581026891411456",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581027793186816",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581028669796352",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581029659652096",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581030750171136",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581031551283200",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581032268509184",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581032893460480",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581033472274432",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581935704735744",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581937382457344",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581938393284608",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581939362168832",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581940452687872",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581941572567040",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581942587588608",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581943577444352",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581944567300096",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581945456492544",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581946341490688",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581947142602752",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2005581947822080000",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102532879577088",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102534368555008",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102535945613312",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102536771891200",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102537669472256",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102538692882432",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102539569491968",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102540483850240",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102872693698560",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102874786656256",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102875680043008",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102876426629120",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102877311627264",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102914372497408",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102915332993024",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009102916247351296",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107825004933120",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107826221281280",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107827085307904",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107829996154880",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107830897930240",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107832122667008",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107833062191104",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2009107833972355072",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2040995147879063552",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_al_2040995521771905024",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988046103154552832",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988046842874589184",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988048180303917056",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988049375802191872",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988058719184777216",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988058827116802048",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988059164510810112",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988059675792273408",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_doc1988087210169102336",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988046105146847232",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988046844573282304",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988048182023581696",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988049377337307136",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988058720740864000",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988058829113290752",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988059166448578560",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988059677348360192",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_inv1988087211821658112",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988046099274821632",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988046839397511168",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988048177049137152",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988049372706795520",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988058716076797952",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988058823811690496",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988059161386053632",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988059672659128320",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_is_1988087206041907200",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046106782625792",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046107659235328",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046108443570176",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046846825623552",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046847689650176",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988046848549482496",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988048183680331776",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988048184498221056",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988048185316110336",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988049378897588224",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988049379715477504",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988049380487229440",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058722238230528",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058723014176768",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058723790123008",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058830900064256",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058831680204800",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988058832430985216",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059168054996992",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059168872886272",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059169665609728",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059678824755200",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059679604895744",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988059680338898944",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988087213365161984",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988087214174662656",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pay1988087215009329152",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046100424060928",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046110846906368",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046111614464000",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046840269926400",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046851414192128",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988046852265635840",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988048177825083392",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988048188650582016",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988048189451694080",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988049373453381632",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988049382437580800",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988049383272247296",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058716835966976",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058726206042112",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058727007154176",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058824612802560",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058835278917632",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988058836050669568",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059162166194176",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059172098306048",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059172874252288",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059673388937216",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059682553491456",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988059683274911744",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988087206822047744",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988087217542688768",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro1988087218352189440",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pro2040994274813714432",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988046110108708864",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988046850680188928",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988048187950133248",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988049381707771904",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988058725476233216",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988058834196787200",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988059171381080064",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988059681882402816",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur1988087216787714048",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur2040982952835325952",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_pur2040986016673734656",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988046101388750848",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988046841188478976",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988048178655555584",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988049374225133568",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988058717599330304",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988058825535549440",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988059162942140416",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988059674219409408",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_rec1988087207652519936",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988046104328957952",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988046843759587328",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988048181222469632",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988049376582332416",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988058719964917760",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988058828291207168",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988059165668438016",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988059676601774080",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_set1988087211003768832",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988046105893433344",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988046845349228544",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988048182854053888",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988048190827425792",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988049378100670464",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988049384182411264",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988058721437118464",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988058830128312320",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988059167266467840",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988059678015254528",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988087212564049920",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sou1988087224970801152",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_sup1988087227768401920",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sd_zx02041695214965399552",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "sqldataset",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "test_lhd_260105",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "test_table_type",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "test_table_type1",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "test_table_type2",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "test_table_type21",
+        "vertexType": "DATASET"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.dim_ly_org1",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_al2o3_matlv",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_alumtap_prod",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_anode_carb_flowrate",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_bulk_al2o3_flow",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_total_voltage_competition",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_voltage",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_fill_prod_sales_volume_energy_consum",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_it_prod_sales_volume_energy_consum",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.ly_it_workarea_al_product",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "gk_ly_report.ly_report.prd_al_it_area_anode_carb_flowrate",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.aloudatacan.sv_827e03e3535ce24d34487bdb5d68642c0ed5b",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.aloudatacan.sv_9843d5f3ad01db5404e0db44c75f29e201e50",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.aloudatacan.sv_a23590c7ed2d3c12843f9be7e7edd53263357",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.aloudatacan.test_lhd_260105",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ads_prd_al_comp_prod_cons_day_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ads_prd_al_finan_wtable_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ads_prd_ao_finan_wtable_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ads_prd_ao_waterbxt_consum_udf",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_bd_material_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_bd_stordoc_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_bd_supplier_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_dict_common_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_doc_type_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_org_constr_project_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_org_dept_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_org_employee_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_org_orgs_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_prd_date",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dim_prd_org_flatten_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_al_branch_company_d_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_al_branch_company_m_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_al_branfact_m_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_al_fact_d_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_ao_branfact_m_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_ao_fact_d_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_energy_consump_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_pv_gen_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_rd_fact_d_uid",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_prd_rd_fact_m_uid",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ap_paybill_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_bidd_tender_mat_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_gen_vend_info_md_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_gen_vend_pur_cate_link_cf_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ic_material_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_info_rec_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_inventory_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ld_gyb_bad_cust_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ldgyb_hetong_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ldgyb_orderbuzhixing_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_ldgyb_zlfk_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_po_invoice_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_po_order_rxsrm_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_pr_item_tr_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_re_item_tr_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_supplier_deduct_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_supplier_matclass_amt_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_supplierbidbond_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_supplierbiddingamount_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_supplierjoin_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_tender_clm_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_tender_effic_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_tender_project_basic_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dwd_pur_tender_task_basic_info_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.dws_rd_cost_uid",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_mms_material_inventory_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_rxsrm_gen_com_type_cf_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_rxsrm_gen_mat_cate_md_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_rxsrm_gen_vend_info_md_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_rxsrm_gen_vend_pur_cate_link_cf_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      },
+      {
+        "tenantId": "tn_58",
+        "vertexId": "internal.sdhq.ods_rxsrm_org_pur_org_cf_ufd",
+        "vertexType": "PHYSICAL_TABLE"
+      }
+    ],
+    "edgeList": [
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_dwd_pur_po_order_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988087211003768832",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_project_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988049374225133568",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_employee_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_employee_ufd_gl",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_employee_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_employee_ufd_tj",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988087215009329152",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988048177049137152",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ap_paybill_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_project_basic_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_project_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988087213365161984",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_pr_item_tr_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ic_purchasein_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988087216787714048",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988059161386053632",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988059162942140416",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_re_item_tr_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_re_item_tr_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988059171381080064",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_orgs_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_orgs_ufd_ly_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059162166194176",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988058829113290752",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988058830128312320",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058832430985216",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988058834196787200",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988048180303917056",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988048183680331776",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988048188650582016",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988059164510810112",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988059165668438016",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059168872886272",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988049378100670464",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988049380487229440",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059172098306048",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988059167266467840",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988059166448578560",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059168054996992",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_supplier_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059169665609728",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988048177825083392",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059172874252288",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.aloudatacan.sv_a23590c7ed2d3c12843f9be7e7edd53263357",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988087224970801152",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988048181222469632",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988048182854053888",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046107659235328",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988048182023581696",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_mrp_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988048178655555584",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988048184498221056",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988046105893433344",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988048185316110336",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988048187950133248",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988048189451694080",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.aloudatacan.sv_9843d5f3ad01db5404e0db44c75f29e201e50",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988048190827425792",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988046099274821632",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046100424060928",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046108443570176",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988046103154552832",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988046104328957952",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988046110108708864",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046110846906368",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988046101388750848",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988046105146847232",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046106782625792",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046111614464000",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_task_basic_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_urgent_req_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988049379715477504",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_dept_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_dept_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_gen_vend_info_md_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_info_rec_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_employee_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_employee_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_stordoc_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_bd_stordoc_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_invoice_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ap_paybill_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_req_resp_dtl_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988049375802191872",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988049378897588224",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_supplier_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_bd_supplier_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_constr_project_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_constr_project_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_gen_vend_info_md_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sup1988087227768401920",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059673388937216",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988059672659128320",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059678824755200",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988059674219409408",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988049372706795520",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988049376582332416",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988049377337307136",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988049381707771904",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988059675792273408",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988046839397511168",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988059677348360192",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988049373453381632",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988049382437580800",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988049383272247296",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046840269926400",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988046843759587328",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988046842874589184",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046847689650176",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988046850680188928",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046851414192128",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988046852265635840",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988046841188478976",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.aloudatacan.sv_827e03e3535ce24d34487bdb5d68642c0ed5b",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988049384182411264",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988046844573282304",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988046845349228544",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046846825623552",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988046848549482496",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059679604895744",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988059676601774080",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058831680204800",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059682553491456",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988059678015254528",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988059680338898944",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988058717599330304",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988058719184777216",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058726206042112",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058824612802560",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988058827116802048",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988059683274911744",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988059681882402816",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988058716076797952",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058716835966976",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988058719964917760",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988058720740864000",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988058721437118464",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058722238230528",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058723014176768",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058723790123008",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_inv1988087211821658112",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur1988058725476233216",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_task_basic_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_urgent_req_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058727007154176",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_gen_vend_info_md_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_gen_vend_info_md_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplier_deduct_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplier_deduct_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058836050669568",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_set1988058828291207168",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988058823811690496",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988058825535549440",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_rec1988087207652519936",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_doc1988087210169102336",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_is_1988087206041907200",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988087218352189440",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988058830900064256",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_sou1988087212564049920",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988058835278917632",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988087206822047744",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pay1988087214174662656",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro1988087217542688768",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_clm_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_clm_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_pr_item_tr_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_urgent_req_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_urgent_req_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_effic_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_effic_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ldgyb_zlfk_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ldgyb_zlfk_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_mat_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_bidd_tender_mat_info_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_info_rec_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_info_rec_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_pr_item_tr_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_pr_item_tr_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ldgyb_hetong_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ldgyb_hetong_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_pr_item_tr_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_gen_vend_pur_cate_link_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_vend_cate_link_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ldgyb_hetong_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ldgyb_hetong_ufd_wc_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_order_arrival_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_order_arrival_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_bd_material_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_invoice_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ap_paybill_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_invoice_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "test_table_type2",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "test_table_type21",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ic_material_ufd_bzd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_material_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_zsdh_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_zsdh_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_zsdh_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_org1",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_ly_org1",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_invoice_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_invoice_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_stordoc_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_bd_stordoc_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_arriveorder_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_doc_type_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_doc_type_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ic_purchasein_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ic_purchasein_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ap_paybill_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ap_paybill_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_ap_paybill_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "test_table_type",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "test_table_type1",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_pr_item_tr_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_wc_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_tender_task_basic_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_wc_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_tender_task_wc_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_org_orgs_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_org_orgs_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_prd_date",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "calendar_hours",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_inventory_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_mt_inventory_ufd_hq_1",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_inventory_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_inventory_info_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_bd_stordoc_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_bd_stordoc_with_category",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_y_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_m_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_bulk_al2o3_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_bulk_al2o3_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_y_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_y_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_y_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_y_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_m_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_m_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_m_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_m_rawmat_power_consume",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inventory",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_it_area_anode_carb_flowrate",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow_al3wq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_it_area_anode_carb_flowrate",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_rawmat_inflow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_company_prodsales_prod",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_prod_sales_volume_energy_consum",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_rpt_d_company_prodsales_prod",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_pow_electqty",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_material_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_material_flow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "prd_al_dim_time",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_material_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ic_material_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_al2o3_matlv",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_al2o3_matlv",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_bulk_al2o3_flow",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_bulk_al2o3_flow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580115213299712",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581031551283200",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581032893460480",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581940452687872",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581941572567040",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581944567300096",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581947142602752",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580122624634880",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580117092347904",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580118707154944",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580121576058880",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581015868780544",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581937382457344",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581939362168832",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580120321961984",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580123530604544",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005580124537237504",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581023540162560",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581024546795520",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581025389850624",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581026891411456",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581028669796352",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581030750171136",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581027793186816",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581033472274432",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581935704735744",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581943577444352",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581029659652096",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581942587588608",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581032268509184",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581938393284608",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581945456492544",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581946341490688",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2005581947822080000",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplierbidbond_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplierbidbond_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_org_pur_org_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur2040986016673734656",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_alumtap_prod",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_alumtap_prod_wh",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_prd_date",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_calendar_day",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplierbidbond_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplierbidbond_balance_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_org_pur_org_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pro2040994274813714432",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_bulk_al2o3_flow",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_branch_comp_mat",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_branch_comp_mat",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.aloudatacan.test_lhd_260105",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "test_lhd_260105",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_mms_material_inventory_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_qichu_inventory_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_total_voltage_competition",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_total_v_competition",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_other_econ_index",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_voltage",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_other_econ_index",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_other_econ_index",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_pow_electqty",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_pow_electqty",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage_total_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_voltage",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage_total_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage_total_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_it_prod_sales_volume_energy_consum",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_prod_sales_volume_energy_consum",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_prod_sales_volume_energy_consum",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_prod_sales_volume_energy_consum",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_other_econ_index",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_pow_electqty",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_calcsta_voltage",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_calcsta_voltage",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_prd_al_anode_carb_flowrate",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_anode_carb_flowrate",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_prd_al_anode_carb_flowrate",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102535945613312",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102915332993024",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102916247351296",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_it_workarea_al_product",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_alumtap_prod",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102534368555008",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102536771891200",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102877311627264",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102532879577088",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102537669472256",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102538692882432",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102539569491968",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102875680043008",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_it_area_anode_carb_flowrate",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_brfact_anode_cblk",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.prd_al_dim_time",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_brfact_anode_cblk",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102540483850240",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102872693698560",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107825004933120",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107826221281280",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102874786656256",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102876426629120",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009102914372497408",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.ly_fill_brfact_anode_cblk",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ly_fill_brfact_anode_cblk",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107829996154880",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107827085307904",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107830897930240",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107832122667008",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107833062191104",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_prd_al_org",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2009107833972355072",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_al_branch_company_d_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_al_branch_company_d_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2040995147879063552",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_prd_org_flatten_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_al_date",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_prd_date",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_al_date",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "gk_ly_report.ly_report.dim_ly_material",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_al_2040995521771905024",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ld_gyb_bad_cust_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ld_gyb_bad_cust_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_al_branfact_m_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_al_branfact_m_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ads_prd_ao_waterbxt_consum_udf",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ads_prd_ao_waterbxt_consum_udf",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_energy_consump_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_energy_consump_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_rd_fact_m_uid",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_rd_fact_m_uid",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_mrp_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_order_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_order_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_po_order_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_al_branch_company_m_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_al_branch_company_m_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dws_rd_cost_uid",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dws_rd_cost_uid",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_prd_org_flatten_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_prd_org_flatten_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ads_prd_al_finan_wtable_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ads_prd_al_finan_wtable_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_ao_fact_d_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_ao_fact_d_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_ao_branfact_m_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_ao_branfact_m_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_pv_gen_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_pv_gen_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_rd_fact_d_uid",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "capacity",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplierbiddingamount_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplierbiddingamount_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sqldataset",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_rd_fact_d_uid",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_rd_fact_d_uid",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ldgyb_orderbuzhixing_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_pur_vend_no_exec_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ads_prd_ao_finan_wtable_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "ads_prd_ao_finan_wtable_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_bidd_tender_info_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_pur_tender_project_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_bidd_tender_info_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_bidd_tender_info_ufd_invbid_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_org_pur_org_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_pur2040982952835325952",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ads_prd_al_comp_prod_cons_day_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "sd_zx02041695214965399552",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_gen_com_type_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_org_pur_org_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_gen_vend_pur_cate_link_cf_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_gen_mat_cate_md_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.ods_rxsrm_gen_vend_info_md_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dim_bd_supplier_industry_org_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dim_dict_common_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dim_supplier_enterprise_type",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplierjoin_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplierjoin_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_supplier_matclass_amt_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_supplier_matclass_amt_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_arriveorder_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ic_purchasein_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_ic_purchasein_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "fact_dwd_pur_ic_purchasein_ufd_hq",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_pur_po_order_rxsrm_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_pur_po_order_rxsrm_ufd",
+          "vertexType": "DATASET"
+        }
+      },
+      {
+        "srcVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "internal.sdhq.dwd_prd_al_fact_d_ufd",
+          "vertexType": "PHYSICAL_TABLE"
+        },
+        "dstVertex": {
+          "tenantId": "tn_58",
+          "vertexId": "dwd_prd_al_fact_d_ufd",
+          "vertexType": "DATASET"
+        }
+      }
+    ]
+  },
+  "meta": {
+    "description": "仅保留 PHYSICAL_TABLE、DATASET、ANALYSIS_VIEW，用于与治理平台表级资产在知识图谱中打通。",
+    "allowed_vertex_types": [
+      "ANALYSIS_VIEW",
+      "DATASET",
+      "PHYSICAL_TABLE"
+    ],
+    "vertex_count_unique_by_vertexId": 377,
+    "edge_count_after_filter": 364,
+    "edge_count_before_filter": 9900,
+    "vertexId_type_collisions": []
+  }
+}

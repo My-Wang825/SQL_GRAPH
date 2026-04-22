@@ -1,6 +1,6 @@
 # Cursor Skill：sql-knowledge-graph
 
-本目录为 **SQL 知识图谱** 的 Agent Skill，与仓库根目录中的参考实现（`backend/`、`frontend/`、`开发说明文档.md` 等）配套使用。
+本目录为 **SQL 知识图谱** 的 Agent Skill。若仓库根下**尚未**包含 `backend/`、`frontend/` 等实现，请先按 **`运行与搭建命令手册.md`** 从团队参考实现目录复制代码后再运行；若已配套完整工程，则 Skill 与 `开发说明文档.md` 等交叉对照使用即可。
 
 ## 文件说明
 
@@ -9,6 +9,7 @@
 | `SKILL.md` | **主 Skill**：触发描述、跨仓库规范、落地顺序 |
 | `reference.md` | JSON 字段、可选模块、本仓库源文件索引 |
 | `examples.md` | 最小 SQL 与响应结构示例 |
+| `运行与搭建命令手册.md` | **仅有 Skill 文档时**：从参考实现复制前后端与数据、venv、启动与浏览器验证的逐步命令（Windows PowerShell） |
 | `README.md` | 本说明 |
 
 ## 安装到 Cursor

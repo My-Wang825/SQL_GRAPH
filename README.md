@@ -124,7 +124,9 @@ SQL-graph/
 │   └── js/
 │       └── app.js              # 图谱加载、D3 渲染、搜索、详情面板
 ├── data/                       # SQL 数据集（ADS/DM/DWD 等）
+├── .cursor/skills/sql-knowledge-graph/  # Cursor Skill：跨仓库复用的 SQL 图谱规范（见其中 README.md）
 ├── sql-knowledge-graph-prompt.md  # 需求与设计说明
+├── 开发说明文档.md              # 端到端开发流程说明
 ├── requirements.txt            # Python 依赖
 └── README.md                   # 本说明
 ```
